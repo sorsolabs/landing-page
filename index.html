@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 80'%3E%3Cpath d='M6 47 C30 18 62 14 96 40 C124 61 154 62 194 31 C176 58 142 72 104 50 C76 34 44 30 6 47 Z' fill='%230b6bf5'/%3E%3C/svg%3E" />
   <title>Sorsalabs — Coming Soon</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -31,10 +32,23 @@
     }
 
     .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .logo svg {
+      width: 88px;
+      height: auto;
+      display: block;
+    }
+
+    .logo .wordmark {
       font-size: 1rem;
       font-weight: 700;
       letter-spacing: -0.02em;
-      margin-bottom: 2.5rem;
     }
 
     .eyebrow {
@@ -85,7 +99,18 @@
 </head>
 <body>
 
-  <div class="logo">Sorsalabs</div>
+  <div class="logo">
+    <svg viewBox="0 0 200 80" role="img" aria-label="Sorsalabs">
+      <defs>
+        <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#0b6bf5" />
+          <stop offset="100%" stop-color="#2b9bff" />
+        </linearGradient>
+      </defs>
+      <path d="M6 47 C30 18 62 14 96 40 C124 61 154 62 194 31 C176 58 142 72 104 50 C76 34 44 30 6 47 Z" fill="url(#wave)" />
+    </svg>
+    <span class="wordmark">Sorsalabs</span>
+  </div>
   <span class="eyebrow">Coming soon</span>
   <h1>Something new is on the way.</h1>
   <p>We're rebuilding this site. Check back soon, or get in touch in the meantime.</p>
